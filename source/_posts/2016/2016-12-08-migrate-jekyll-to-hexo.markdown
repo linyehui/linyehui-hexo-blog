@@ -1,5 +1,5 @@
 ---
-title: 把GitHub Pages上的博客从Jekyll迁移到Hexo
+title: '把GitHub Pages上的博客从Jekyll迁移到Hexo'
 date: 2016-12-08 17:21:02
 tags:
     - hexo
