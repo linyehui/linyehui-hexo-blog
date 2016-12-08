@@ -11,13 +11,13 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: false
 
 # Specify the date when the site was setup
 since: 2010
 
 # icon between year and author @Footer
-authoricon: heart
+authoricon: wifi
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
@@ -68,8 +68,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -130,9 +130,9 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
-
+social:
+  GitHub: https://github.com/linyehui
+  Twitter: http://twitter.com/linyehui
 
 # Social Links Icons
 # Icon Mapping:
@@ -143,8 +143,8 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
-  GitHub: https://github.com/linyehui
-  Twitter: http://twitter.com/linyehui
+  GitHub: github
+  Twitter: twitter
 
 
 # Sidebar Avatar
@@ -262,7 +262,7 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: linyehui
 
 # Disqus
 #disqus_shortname:
@@ -356,7 +356,7 @@ busuanzi_count:
 
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 59868687
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
