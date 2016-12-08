@@ -1,0 +1,34 @@
+---
+title: '#include &lt;wrl.h&gt;引发的C2872编译错误'
+layout: post
+tags:
+    - win8
+    - winrt
+    - wrl
+---
+
+# 问题
+1. 新建一个Windows Metro style的Project(Application/Grid Application/WinRT Component DLL……)
+2. \#include <wrl.h>
+3. 编译，发现一堆错误，类似：
+
+```
+    1>c:\program files (x86)\windows kits\8.0\include\winrt\inspectable.h(110): error C2872: 'TrustLevel' : ambiguous symbol
+    1>          could be 'c:\program files (x86)\windows kits\8.0\include\winrt\inspectable.h(76) : TrustLevel'
+    1>          or       'c:\program files (x86)\microsoft visual studio 11.0\vc\lib\platform.winmd : Platform::TrustLevel'
+```
+
+# 分析
+1. 错误原因很明显，两个命名空间下的类型定义冲突了
+2. 所以解决问题的方法其实就是二选一
+3. 我的方法是不用Platform这个命名空间下的类型定义，所以不要使用using namespace Platform，而是在需要的地方加上命名空间前缀，类似
+
+> Platform::TrustLevel
+
+
+## Project中带有App.xaml的解决方案
+1. 我这暂时无解，因为App.g.h中会自动帮你生成代码：using namespace Platform
+
+## Project中不带App.xaml的解决方案
+1. 这就就比较好办了，不要在文件头使用会导致C3872错误的using namespace
+2. WinRT Component DLL的Project还会自动生成一个using namespace Windows::Foundation，也会有类似的问题，去掉文件头的using namespace，在需要的地方单独加前缀就可以解决这个问题

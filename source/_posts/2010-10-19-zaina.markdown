@@ -1,0 +1,33 @@
+---
+title: '在哪-M8免费手机定位软件'
+layout: post
+tags:
+    - m8
+    - zaina
+---
+
+# 应用简介
+【M8在哪】是一款基于M8的开源免费手机定位软件。
+
+【M8在哪】基于开源项目：<http://zaina.codeplex.com/>  
+
+
+软件实现依赖于.NET CF，使用之前请确认你的M8已经安装了.NET CF 3.5。  
+
+在哪的诞生离不开开源项目：[Managed Meizu SDK Wrapper](http://managedmeizusdk.codeplex.com/)
+
+【M8在哪】于2010/10/29日在魅族软件中心上架 [软件中心在哪介绍](http://developer.meizu.com/view/app-view.jsp?vid=160001)
+
+# 应用截图
+
+![M8 截图](/media/files/2010/10/29/zaina_prt_scn_01.png)
+![M8 截图](/media/files/2010/10/29/zaina_prt_scn_02.png)
+![M8 截图](/media/files/2010/10/29/zaina_prt_scn_03.png)
+![M8 截图](/media/files/2010/10/29/zaina_prt_scn_04.png)
+![M8 截图](/media/files/2010/10/29/zaina_prt_scn_05.png)
+
+# 应用下载
+CAB安装包下载（CAB包复制到M8中安装）：<http://zaina.codeplex.com/releases>
+
+# 源码
+【M8在哪】在GitHub上的地址：<https://github.com/linyehui/zaina>

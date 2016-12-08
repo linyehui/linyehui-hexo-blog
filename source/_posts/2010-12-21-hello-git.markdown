@@ -1,0 +1,59 @@
+---
+title: 'Hello Git'
+layout: post
+tags:
+    - git
+    - hello
+    - windows7
+---
+
+这是我的Git入门笔记，讲述我在Windows 7上的Git初体验。  
+
+整个过程主要参考：<http://lab.mzr.jp/progit/progit.zh.html.gz>  
+
+
+# 1、Windows上安装Git
+有个叫做 msysGit 的项目提供了git的Windows安装包，可以从 Google Code 的页面上下载安装文件（.exe）：
+<http://code.google.com/p/msysgit>    
+
+我下载的是这个：“Full installer for official Git 1.7.3.1”
+
+## Tips:
+* a、安装时推荐只使用Git Bash，因为我试过了在Win7下在命令行下直接使用Git会有各种各样奇怪的问题
+* b、Win7上打开Git Bash切记要“以管理员权限打开”
+这个非常重要，不这么做会出现类似的提示：
+> error: Failed connect to github.com:443; No error while accessing
+
+# 2、路径使用注意
+使用Git Bash时的目录切换采用类似的命令行：cd /e/github/zaina，而不是Windows那样的cd E:然后cd:github/zaina
+
+# 3、你可能需要设置代理，那么设置两个环境变量
+[参考文献](https://github.com/blog/642-smart-http-support)  
+
+> http_proxy = "http://proxy1.somecompany.com:8080"
+https_proxy = "http://proxy1.somecompany.com:8080"
+
+# 4、遇到“fatal: write error: Broken pipe”怎么办？
+[参考文献](http://flightschool.acylt.com/devnotes/git-fatal-write-error-broken-pipe/)  
+
+用这个命令行解决：git config http.postBuffer 104857600
+
+# 5、不小心把obj文件入库了怎么删除
+删除文件及索引用命令:git rm -f xxx.obj  
+
+删除目录及对应的索引用命令：git rm -r -f obj
+
+# 6、github的README文件想要显示中文的话要记得保存成UTF编码
+
+# 7、.gitconfig的路径问题
+.gitconfig的配置不支持"D:\Program Files\"这样的带空格的路径，如果你非要放在这样的目录下，建议你加个环境变量
+
+# 8、CopSSH激活系统用户作为ssh用户时卡很久
+用CopSSH在Windows上搭建git服务器时，安装后需要激活系统的用户作为ssh的用户，执行这一步时如果你所在的域有很多用户（比如公司环境），那么这个地方会卡住很久，有个小技巧：断开网络后再执行这个操作
+
+# 9、TortoiseGit
+TortoiseGit非常好用，习惯TortoiseSVN 的话能很快上手  
+
+[TortoiseGit下载地址](http://code.google.com/p/tortoisegit/)，  
+
+还有[使用教程](http://www.zonozone.com/tiki/tiki-index.php?title=TortoiseGit%25E4%25BD%25BF%25E7%2594%25A8%25E5%2585%25A5%25E9%2597%25A8)

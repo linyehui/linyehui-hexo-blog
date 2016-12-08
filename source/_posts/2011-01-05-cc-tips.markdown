@@ -1,0 +1,11 @@
+---
+title: 'ClearCase使用技巧'
+layout: post
+tags:
+---
+
+1. ClearCase Find Checkout时的默认窗口大小是保存在注册表中的，如果这个默认大小你不喜欢，你可以删除注册表中的键值，这样就会还原回默认的大小。
+
+> HKEY_CURRENT_USER\Software\Atria\ClearCase\CurrentVersion\FindCheckouts\Settings
+>
+>	Window Rect

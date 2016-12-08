@@ -1,0 +1,27 @@
+---
+title: 'WinRT 0xC0000135'
+layout: post
+tags:
+    - win8
+    - winrt
+---
+
+我的sln下面有两个WinRT工程，一个是exe，一个是dll，exe动态链接dll，一切看上去都是那么的和谐，但运行起来却不是那么回事：  
+
+直接退出，返回错误码为0xC0000135
+
+从MSDN上找到一个类似的例子：[Metro style app links to static lib, 0xc0000135 on start up](http://social.msdn.microsoft.com/Forums/en-US/winappswithnativecode/thread/dd42e972-414a-4809-a976-9ba91ec668ac)
+
+看完之后，尝试把我的dll拷贝到System32目录下，再运行竟然可以了 :(
+
+不过这事还没结束，这可不是我想要的结果，但由于时间问题，我只能先暂时搁置下这个问题，后面再来继续解决，待续……
+
+**2011/11/24 补充：**  
+
+Metro style App调试的时候VS2011会自动帮你把exe部署到“容器”环境下，实际的目录在  
+
+> C:\Users\{你的登录名}\{GUID}VS.Debug.Win32.{你的登录名}\
+
+如果这个exe依赖了另外一个你自己写的DLL，那么部署的时候VS不会帮帮你部署DLL，但是你可以自己复制过去，这样就不用复制到System32目录下了
+
+不知道还有没有更好的方法，继续待续……
