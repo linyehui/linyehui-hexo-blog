@@ -85,7 +85,8 @@ comments: false
 
 * 上面都没问题，就可以发布了
 ```
-hexo deploy
+## 发布前记得generate，保险起见带上--generate参数
+hexo deploy --generate
 ```
 	每次发布，你都会发现你的github仓库的master分支只有两次commit，也就是说hexo deploy把老的master分支给删除了……
 
