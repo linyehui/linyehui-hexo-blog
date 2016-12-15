@@ -97,7 +97,7 @@ Specifically, the status indicator kept spinning indefinitely while logging in. 
 2.8，去掉二维码，改成Logo，热更新游戏解决
 17.2，写段申诉描述，主要说我们使用了YY的实时语音功能，需要接入YY账号
 
-##### 这个版本的问题都可以通过热更新解决，所以使用申诉而不是重新提交：
+#### 这个版本的问题都可以通过热更新解决，所以使用申诉而不是重新提交：
 ```
 2.2 - Apps that exhibit bugs will be rejected
 2.8 - Apps that install or launch other executable code will be rejected

@@ -24,7 +24,7 @@ tags:
 ## 编译参考文档
 https://github.com/ossrs/srs/wiki/v1_CN_SampleRTMP
 
-##### PS.
+* PS.
 如果之前用不同的配置编译过，那么可以这样子清理下：
 
 ```
@@ -35,7 +35,7 @@ rm -f Makefile
 
 ## 编译
 
-#### 用configure脚本来生成Makefile
+### 用configure脚本来生成Makefile
 ```bash
 cd ./srs/trunk
 
@@ -53,7 +53,7 @@ make
 
 ## 运行SRS服务器
 
-#### srs.conf
+### srs.conf
 由于Mac系统的限制，运行SRS的话需要把./conf/srs.conf中的并发数修改下，我修改成100:
 
 ```bash
@@ -61,7 +61,7 @@ make
 max_connections     100;
 ```
 
-#### rtmp服务器跑起来
+### rtmp服务器跑起来
 ```bash
 ./objs/srs -c ./conf/srs.conf
 
@@ -72,7 +72,7 @@ tail -f ./objs/srs.log
 ps aux | grep srs
 ```
 
-#### 推流
+### 推流
 直接使用OBS或者其他RTMP推流工具，填写下：
 
 ```
@@ -80,12 +80,12 @@ URL：rtmp://10.0.0.54/live
 流密钥：livestream
 ```
 
-#### 看RTMP流视频
+### 看RTMP流视频
 直接用VLC打开这个地址就可以了:
 
 ```
 rtmp://10.0.0.54/live/livestream
 ```
 
-### 小结
+## 小结
 到此Mac上最精简的SRS算是编译通过，且能正常跑起来了~

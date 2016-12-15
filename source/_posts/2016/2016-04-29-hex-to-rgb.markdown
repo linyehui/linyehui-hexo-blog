@@ -15,7 +15,7 @@ CSS下有时候为了偷懒，会把#CCCCCC写成#CCC，这个其实就是自动
 ## 解答
 因为SDK并没有提供HEX参数的UIColor构造函数，所以实际上就是看代码怎么写的
 
-#### 如果按照比较常用的方式是什么样的呢？
+### 如果按照比较常用的方式是什么样的呢？
 [How can I create a UIColor from a hex string?](http://stackoverflow.com/questions/1560081/how-can-i-create-a-uicolor-from-a-hex-string)
 
 

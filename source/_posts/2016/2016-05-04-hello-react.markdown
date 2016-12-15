@@ -47,24 +47,24 @@ tags:
 
 ## React + npm + webpack
 
-#### 1. 创建一个目录hello-react
+### 1. 创建一个目录hello-react
 之后的命令行操作都是在这个目录下进行的。
 
-#### 2. npm init一个package.json文件，全部使用默认即可
+### 2. npm init一个package.json文件，全部使用默认即可
 ```shell
 npm init
 ```
 
-#### 3. 配置npm依赖
+### 3. 配置npm依赖
 这里的webpack我并没有使用全局安装，下面的步骤会用到
 
 ```shell
 npm install --save react react-dom babel-preset-react babel-loader babel-core webpack
 ```
 
-#### 4. 在hello.html和hello.js中写代码
+### 4. 在hello.html和hello.js中写代码
 
-##### hello.html
+#### hello.html
 ```html
 <!DOCTYPE html>
 <html>
@@ -80,7 +80,7 @@ npm install --save react react-dom babel-preset-react babel-loader babel-core we
 </html>
 ```
 
-##### hello.js
+#### hello.js
 ```javascript
 // hello.js
 var React = require('react');
@@ -92,15 +92,15 @@ ReactDOM.render(
 );
 ```
 
-#### 5. 用webpack生成bundle.js
+### 5. 用webpack生成bundle.js
 
-##### 创建并配置babel：.babelrc
+#### 创建并配置babel：.babelrc
 
 ```
  { "presets": ["react"] }
 ```
 
-##### webpack打包，使用本地目录下的webpack，而不是全局的
+#### webpack打包，使用本地目录下的webpack，而不是全局的
 ```
 ./node_modules/webpack/bin/webpack.js hello.js bundle.js --module-bind 'js=babel-loader'
 ```
@@ -116,7 +116,7 @@ ReactDOM.render(
 ./package.json
 ```
 
-#### 6. OK了
+### 6. OK了
 直接用浏览器打开./hello.html就是我们想要的用npm和webpack打包出来的，最简单的react hello worl
 
 ## webpack配置

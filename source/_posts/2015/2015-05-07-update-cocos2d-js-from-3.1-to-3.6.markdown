@@ -34,27 +34,27 @@ cocos2d-js 3.1的热更新有点问题，我们想升级到3.2；打开官网一
 
 ## 升级步骤
 
-##### 1.本次只更新cocos2d-js和ide，cocos studio保持1.6版本不变，需要下载下面这两个文件：  
+### 1.本次只更新cocos2d-js和ide，cocos studio保持1.6版本不变，需要下载下面这两个文件：  
 
 * cocos2d-js-v3.6.zip
 * cocos-code-ide-win64-1.2.0.exe，对应的Mac版本：cocos-code-ide-mac64-1.2.0.dmg  
 
-##### 2.删除或者重命名cocod2d-3.1目录（这一步其实可以不做，只是方便环境没有切换过来的时候不至于使用到老的）  
+### 2.删除或者重命名cocod2d-3.1目录（这一步其实可以不做，只是方便环境没有切换过来的时候不至于使用到老的）  
 
 
-##### 3.解压cocos2d-js-v3.6.zip，解压后执行下setup.py，执行后在命令行下执行下cocos命令，检查下路径是否正确  
+### 3.解压cocos2d-js-v3.6.zip，解压后执行下setup.py，执行后在命令行下执行下cocos命令，检查下路径是否正确  
 
 
-##### 4.安装cocos ide（覆盖安装），并设置下cocos2d-js的新目录（首选项-》cocos-》Javascript）  
+### 4.安装cocos ide（覆盖安装），并设置下cocos2d-js的新目录（首选项-》cocos-》Javascript）  
 
 
-##### 5.从cocos2d-js目录下重新复制这4个目录到工程目录：  
+### 5.从cocos2d-js目录下重新复制这4个目录到工程目录：  
 
 frameworks/cocos2d-html5/
 frameworks/js-bindings/
 tools/bindings-generator/
 tools/tojs/
-##### 6.使用cocos ide或者xcode编译，第一次编译需要较长的时间
+### 6.使用cocos ide或者xcode编译，第一次编译需要较长的时间
 
 
 ## 升级过程中遇到的问题

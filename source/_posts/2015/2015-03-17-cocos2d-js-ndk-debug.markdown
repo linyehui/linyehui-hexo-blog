@@ -13,7 +13,7 @@ cocos2d-js-v3.1生成的工程，添加了C++的代码，想要调试C++部分�
 
 ## 解决过程 
 
-#### 环境配置
+### 环境配置
 Windows跟Mac下都统一使用ADT，除了路径格式有点区别，其他的配置都是一样的。
 
 ```
@@ -26,9 +26,9 @@ D:\android-ndk-r9d
 ```
 为了说明这个问题，我用cocos code IDE创建了一个工程NativeDemo，下面中的.\NativeDemo就是这个工程的根目录
 
-#### Add Native Support
+### Add Native Support
 
-##### 默认生成的工程是找不到Add Native Support的
+#### 默认生成的工程是找不到Add Native Support的
 用ADT打开工程后，没有办法使用Native来调试，这样就没办法调试NDK了，排查了下：  
 
 1.右键工程Android Tools中没有Add Native Support菜单  
@@ -39,15 +39,15 @@ D:\android-ndk-r9d
 
 ![cproject](/media/files/2015/03/17/cproject.png)
 
-##### 使用cocos console和cocos studio创建的工程有什么不同
+#### 使用cocos console和cocos studio创建的工程有什么不同
 首先，这两种方式创建的工程，都有上面的这个问题，也就是缺失了.cproject这个文件；  
 
 除此之外cocos console创建的工程是个empty project，而cocos studio创建工程的时候会有一个简单的向导，帮你生成第一个页面。
 
-##### 出现这个问题的原因：
+#### 出现这个问题的原因：
 工程创建的时候生成的.project已经添加了"Add Native Support"支持，但是同时生成的.cproject文件却没有入库，从而导致了上面的问题
 
-##### 解决方案：
+#### 解决方案：
 打开.\NativeDemo\frameworks\runtime-src\proj.android\.project，查找并删除cdt相关的两部分配置：
 1.BuildCommand  
 
@@ -62,16 +62,16 @@ D:\android-ndk-r9d
 
 修改好了之后，右键工程，Android Tools，Add Native Support 
 
-##### 参考
+#### 参考
 [How to build and run HelloWorld on Android NDK r5 and above](http://www.cocos2d-x.org/wiki/How_to_build_and_run_HelloWorld_on_Android_NDK_r5_and_above)  
 
 [无需cygwin，使用NDK进行开发](http://www.cnblogs.com/sw926/p/3232311.html)  
 
 
 
-#### 配置NDK build
+### 配置NDK build
 
-##### 添加一个C++变量
+#### 添加一个C++变量
 
 ```
 COCOS2DX_HOME
@@ -80,7 +80,7 @@ COCOS2DX_HOME
 
 ![build var](/media/files/2015/03/17/build_var.png)
 
-##### 配置NDK build的命令行
+#### 配置NDK build的命令行
 ```
 #Windows
 ndk-build NDK_DEBUG=1 -C "${ProjDirPath}" "NDK_MODULE_PATH=${COCOS2DX_HOME}/..;${COCOS2DX_HOME};${COCOS2DX_HOME}/external;${COCOS2DX_HOME}/cocos;../Classes"
@@ -99,7 +99,7 @@ C++编译过程中出现
 Failed Android build: “error: relocation overflow in R_ARM_THM_CALL”
 ```
 
-##### 解决方案：
+#### 解决方案：
 /runtime-scr/proj.android/jni/Android.mk 中添加一行：
 > LOCAL_ARM_MODE := arm
 

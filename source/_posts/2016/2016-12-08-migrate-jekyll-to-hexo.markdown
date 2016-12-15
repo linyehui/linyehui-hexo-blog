@@ -24,7 +24,7 @@ Blog源代码：https://github.com/linyehui/linyehui-hexo-blog
 	- 从master建立分支用于代码备份（多留个心眼，后面发现很有用），备份用的分支：[release-jekyll](https://github.com/linyehui/linyehui.github.io/tree/release-jekyll)
 	- 保险起见，我把本地的github 仓库也备份了下
 
-* 创建一个新的github仓库用户存储我的hexo blog代码：https://github.com/linyehui/linyehui-hexo-blog，git clone到本地，得到hexo的本地根目录：linyehui-hexo-blog
+* 创建一个新的github仓库用于存储我的hexo blog代码：[linyehui-hexo-blog](https://github.com/linyehui/linyehui-hexo-blog)，git clone到本地，得到hexo的本地根目录：linyehui-hexo-blog
 * 初始化hexo本地环境
 ```shell
 git clone https://github.com/linyehui/linyehui-hexo-blog
